@@ -1,0 +1,29 @@
+// Breakpoints
+$breakpoint-phone: 320px;
+$breakpoint-tablet: 1012px;
+$breakpoint-desktop: 1440px;
+
+// Variables colors
+$color-primary: #a1a1a1;
+$color-primary-dark: #454545;
+$color-secondary: #000;
+$color-tertiary: #fff;
+$default-size: 1.2rem;
+
+@mixin responsive($break-point) {
+  @if $break-point == sm-desktop {
+    @media only screen and (max-width: 68.75em) {
+      @content;
+    }
+  }
+  @if $break-point == tablet {
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    }
+  }
+  @if $break-point == phone {
+    @media only screen and (max-width: 26.5625em) {
+      @content;
+    }
+  }
+}
